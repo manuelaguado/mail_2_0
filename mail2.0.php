@@ -13,7 +13,7 @@ class Email{
 			$this->$key = strip_tags($value);
 		}
 		ob_start();
-		include_once 'resources/plantillas_email/email-'.$plantilla.'.php';
+		include_once '../resources/plantillas_email/email-'.$plantilla.'.php';
 		return ob_get_clean();
 	}
 	public function envia_correo($datamail){
